@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+          zoom: 2;
+          font-family: 'Arial', sans-serif;
+        }
+    
+        header {
+          background-color: #ffffff;
+          padding: 10px;
+        }
+    
+        nav {
+          text-align: right;
+          margin-right: 50px;
+        }
+    
+        ul {
+          margin: 0;
+        }
+    
+        li {
+          display: inline;
+          margin: 2px;
+        }
+    
+        a {
+          text-decoration: none;
+          color: rgb(0, 0, 0);
+          font-weight: bold;
+          font-size: 10px;
+        }
+    
+        a:hover {
+          text-decoration: underline;
+          text-decoration-color: rgb(0, 149, 255);
+          text-decoration-thickness: 2px;
+          text-underline-offset: 2px;
+        }
+        .navname{
+            position: absolute;
+            margin: 50px;
+            margin-top: 8px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .abouttext{
+            position: relative;
+            margin-top: 95px;
+            margin-left: 60px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .thumb{
+            position: relative;
+            margin-top: 30px;
+            margin-left: 30px;
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+        .skilltitle{
+            position: relative;
+            margin-top: 160px;
+            margin-left: 60px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #projects{
+            position: relative;
+            margin-top: 50px;
+        }
+        .img1{
+          width: 100px;
+          height: auto;
+        }
+        .pic{
+          width: 250px;
+          height: auto;
+          position: absolute;
+          top: 70px;
+          right: 100px;
+        }
+        .skilltitle1{
+          position: relative;
+          top: -100px;
+        }
+        .ntxt{  
+          margin-left: 60px;
+          font-size: 15px;
+        }
+        .ntxt1{  
+          margin-left: 350px;
+          font-size: 15px;
+        }
+        .skilltitle2{
+          position: relative;
+          top: -230px;
+          font-weight: 700;
+        }
+        #downloadButton{
+          margin-left: 60px;
+          margin-top: 10px;
+          background-color: #ffffff;
+          border-color: black;
+          border-style: solid;
+          padding: 10px;
+          border-radius: 20px;
+        }
+        .pic1{
+          width: 650px;
+          height: auto;
+          margin-top: -220px;
+          margin-left: 60px;
+        }
+        .s3{
+          margin-top: 300px;
+        }
+        .pic2{
+          width: 650px;
+          height: auto;
+          margin-top: -220px;
+          margin-left: 60px;
+        }
+        .txt{
+          margin-left: 60px;
+        }
+        .sn{
+          margin-top: 50px;
+        }
+        .sn1{
+          margin-top: 50px;
+        }
+      </style>
+</head>
+<body>
+    <header>
+      <div id="content">
+        <nav>
+            <p class="navname">Ali Sharjeel</p>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="about">
+        <img class="pic" src="./image.png">
+      <p class="abouttext">Hi, I Am <br><span style="color: rgb(0, 149, 255);">Ali Sharjeel.</span><br> An Aspiring <br><span style="color: rgb(0, 149, 255);">Web Developer</span></p>
+    </div>
+    <div id="skills">
+        <p class="skilltitle">Skills</p>
+        <button class="thumb"><img class ="img1" src="./html.png"></button>
+        <button class="thumb"><img class ="img1" src="./css.png"></button>
+        <button class="thumb"><img class ="img1" src="./js.png"></button>
+        <button class="thumb"><img class ="img1" src="./C.png"></button>
+    </div>
+    <div id="projects">
+        <p class="skilltitle skilltitle1">Projects</p>
+        <p class="skilltitle skilltitle1 skilltitle2">Walmart Website Clone</p>
+        <img class="pic1" src="walmart.png">
+        <p class="txt">for my semester 1 ict project, me and my friend built this walmart website clone using html and css</p>
+        <p class="skilltitle skilltitle1 skilltitle2 s3">Calculator</p>
+        <img class="pic2" src="calculator.PNG">
+        <p class="txt">for my semester 1 ict exam, i built this simple calculator using html, css and javascript</p>
+
+    </div>
+    <div id="resume">
+        <p class="skilltitle sn">Resume</p>
+        <button id="downloadButton">Download PDF</button>
+    </div>
+    <div id="contact">
+        <p class="skilltitle sn1">Contact</p>
+        <p class="ntxt">Email: ali.sharjeel2014@gmail.com</p>
+    </div>
+  </div>
+    <footer class="ntxt1">
+      Ali Sharjeel
+    </footer>
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+    var pdfPath = 'resume.pdf';
+
+    var link = document.createElement('a');
+    link.href = pdfPath;
+    link.target = '_blank';
+    link.download = 'resume.pdf';
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+    });
+    </script>
+</body>
+</html>
